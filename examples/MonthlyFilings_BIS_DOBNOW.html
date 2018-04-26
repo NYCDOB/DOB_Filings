@@ -33,11 +33,11 @@
       //get each key of the data that is not date
       //these will be our key in the key/value pair
       //the values x and y will be month and the value
-      var historicalBarChart = Object.keys(data[0]).filter(function(k){return k!="FilingDate"})
+      var historicalBarChart = Object.keys(data[0]).filter(function(k){return k!="FDate"})
         .map(function(k){
           return {"key":k,"values":data.map(function(d){
            return {
-             "x":d.FilingDate,
+             "x":d.FDate,
              "y":+d[k]
            }
           })}
